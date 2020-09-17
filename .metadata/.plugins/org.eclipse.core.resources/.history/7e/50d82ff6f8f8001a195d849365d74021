@@ -1,0 +1,15 @@
+package kaszino;
+
+public class Asztal {
+	private Jatekos[] jatekosok;
+	private double tet;
+	private int kor;
+	private double goal;
+	
+	public void ujJatek() {}
+	public void addJatekos() {}
+	public int getKor() { return -1; }
+	public void emel(double d) {}
+	public void kor() {}
+	public int getTet() { return -1; }
+}

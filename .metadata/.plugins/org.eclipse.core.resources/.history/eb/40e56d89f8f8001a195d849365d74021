@@ -1,0 +1,9 @@
+package kaszino;
+
+public class Main {
+	static public void main(String[] args) {
+		Asztal asztal = new Asztal();
+		Jatekos j = new Jatekos();
+		j.
+	}
+}

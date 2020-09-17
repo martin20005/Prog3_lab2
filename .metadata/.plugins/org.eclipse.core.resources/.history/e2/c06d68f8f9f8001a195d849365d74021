@@ -1,0 +1,31 @@
+package kaszino;
+
+public class Asztal {
+	private Jatekos[] jatekosok;
+	private double tet;
+	private int kor;
+	private double goal;
+	
+	private int j_db;
+	
+	public void ujJatek() {
+		
+	}
+	
+	public void addJatekos(Jatekos j) {
+		if (j_db >= 10)
+			System.out.println("Nem fér ide több játékos");
+		else {
+			jatekosok
+			j.setAsztal(this);
+		}
+	}
+	
+	public int getKor() { return -1; }
+	
+	public void emel(double d) {}
+	
+	public void kor() {}
+	
+	public int getTet() { return -1; }
+}

@@ -1,0 +1,14 @@
+package kaszino;
+
+public class Jatekos {
+	protected Asztal asztal;
+	
+	public void lep() {
+		
+	}
+	
+	public void setAsztal(Asztal a) {
+		
+	}
+	
+}

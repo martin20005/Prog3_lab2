@@ -1,0 +1,12 @@
+package kaszino;
+
+public class Main {
+	static public void main(String[] args) {
+		Asztal asztal = new Asztal();
+		Jatekos[3] j = Jatekos[3];
+		for (int i = 0; i < 3; i++) {
+			j[i] = new Jatekos();
+			j[i].setAsztal(asztal);
+		}
+	}
+}

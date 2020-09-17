@@ -1,0 +1,15 @@
+package kaszino;
+
+public class Jatekos {
+	protected Asztal asztal;
+	
+	public void lep() {
+		String tajekoztatas = asztal.getKor() + ". kör, a tét " + asztal.getTet(;
+		System.out.println(tajekoztatas);
+	}
+	
+	public void setAsztal(Asztal a) {
+		
+	}
+	
+}

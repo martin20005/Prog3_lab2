@@ -1,0 +1,8 @@
+package kaszino;
+
+public class Asztal {
+	private Jatekos[] jatekosok;
+	private double tet;
+	private int kor;
+	private double goal;
+}
