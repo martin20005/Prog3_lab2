@@ -4,11 +4,6 @@ public class Robot extends Jatekos {
 	private int id;
 	static private int next_id = 0;
 	
-	public Robot()
-	{
-		id = next_id++;
-	}
-	
 	@Override
 	public String toString() 
 	{
