@@ -22,12 +22,14 @@ public class Main {
 			catch (NincsJatekos nj) {}
 		}
 		
-		
 		Asztal uresAsztal = new Asztal();
 		try 
 		{
 			uresAsztal.kor();
 		}
-		catch (NincsJatekos nj) {}
+		catch (NincsJatekos nj) 
+		{
+			System.out.println("Ennél az asztalnál nem ülnek");
+		}
 	}
 }

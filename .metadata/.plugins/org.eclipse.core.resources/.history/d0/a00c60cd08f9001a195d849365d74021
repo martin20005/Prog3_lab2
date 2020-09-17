@@ -28,6 +28,9 @@ public class Main {
 		{
 			uresAsztal.kor();
 		}
-		catch (NincsJatekos nj) {}
+		catch (NincsJatekos nj) 
+		{
+			System.out.println("Ennél az asztalnál nem ülnek");
+		}
 	}
 }

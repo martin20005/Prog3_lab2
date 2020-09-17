@@ -38,10 +38,10 @@ public class Asztal
 	
 	public void emel(double d) { tet += d; }
 	
-	public void kor() throws NincsJatekos {
+	public void kor() {
 		
 		if (j_db == 0) 
-			throw new NincsJatekos("Nem ülnek az asztalnál.");
+			throw new NincsJatekos();
 		else
 		{
 			if (tet > goal) { 

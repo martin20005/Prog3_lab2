@@ -40,35 +40,29 @@ public class Asztal
 	
 	public void kor() throws NincsJatekos {
 		
-		if (j_db == 0) 
-			throw new NincsJatekos("Nem ülnek az asztalnál.");
-		else
+		if (j_db == 0) throw new NincsJatekos();
+		
+		if (tet > goal) { 
+			System.out.println("Vége a játéknak.");
+		}
+		else 
 		{
-			if (tet > goal) { 
-				System.out.println("Vége a játéknak.");
-			}
-			else 
+			kor++;
+			for (int i = 0; i < j_db; i++) 
 			{
-				kor++;
-				for (int i = 0; i < j_db; i++) 
+				jatekosok[i].lep();
+				if (tet > goal) 
 				{
-					jatekosok[i].lep();
-					if (tet > goal) 
+					if (tet < 1.1*goal) 
 					{
-						if (tet < 1.1*goal) 
-						{
-							System.out.println("A nyertes: " + i);
-							break;
-						}
+						System.out.println("A nyertes: " + i);
+						break;
 					}
 				}
-				System.out.println("Aktuális tét: " + tet);
 			}
+			System.out.println("Aktuális tét: " + tet);
 		}
 	}
 	
-	public double getTet() 
-	{
-		return tet; 
-	}
+	public double getTet() { return tet; }
 }

@@ -15,19 +15,13 @@ public class Main {
 		
 		for (int i = 0; i < 3; i++) 
 		{
-			try 
-			{
-				asztal.kor();
+			try {
+				asztal.kor(); 
 			}
-			catch (NincsJatekos nj) {}
+			catch (NincsJatekos nj) 
+			{
+				
+			}
 		}
-		
-		
-		Asztal uresAsztal = new Asztal();
-		try 
-		{
-			uresAsztal.kor();
-		}
-		catch (NincsJatekos nj) {}
 	}
 }

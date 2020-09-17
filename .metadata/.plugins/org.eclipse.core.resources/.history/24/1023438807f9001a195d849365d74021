@@ -40,8 +40,7 @@ public class Asztal
 	
 	public void kor() throws NincsJatekos {
 		
-		if (j_db == 0) 
-			throw new NincsJatekos("Nem ülnek az asztalnál.");
+		if (j_db == 0) throw new NincsJatekos();
 		else
 		{
 			if (tet > goal) { 
