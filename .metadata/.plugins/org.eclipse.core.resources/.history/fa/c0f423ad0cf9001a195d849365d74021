@@ -40,7 +40,7 @@ public class Main {
 		
 		
 		Asztal mesternyuszi = new Asztal();
-		mesternyuszi.addJatekos(new Mester(4));
+		mesternyuszi.addJatekos(new Mester(10));
 		mesternyuszi.addJatekos(new Nyuszi("Kék"));
 		for (int i = 0; i < 10; i++)
 		{

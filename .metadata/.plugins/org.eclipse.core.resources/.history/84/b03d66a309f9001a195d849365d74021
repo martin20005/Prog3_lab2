@@ -19,6 +19,5 @@ public class Robot extends Jatekos {
 	public void lep() 
 	{
 		System.out.println(toString() + ": Ez a " + asztal.getKor() + ". kör");
-		System.out.println();
 	}
 }

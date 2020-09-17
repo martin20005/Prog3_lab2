@@ -21,11 +21,6 @@ public class Kezdo extends Jatekos {
 		if (asztal.getKor() % 2 == 1)
 			System.out.println("Passzolok.");
 		else
-		{
 			asztal.emel(1.0);
-			//System.out.println("Emelek 1-gyel.");
-		}
-		
-		System.out.println();
 	}
 }

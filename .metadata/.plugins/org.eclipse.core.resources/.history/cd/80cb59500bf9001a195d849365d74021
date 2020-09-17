@@ -1,0 +1,10 @@
+package kaszino;
+
+public class Nyuszi {
+	private String szin;
+	
+	public Nyuszi(String szin) 
+	{
+		this.szin = szin;
+	}
+}

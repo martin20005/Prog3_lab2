@@ -65,8 +65,6 @@ public class Asztal
 				System.out.println("Aktuális tét: " + tet);
 			}
 		}
-		System.out.println();
-		System.out.println();
 	}
 	
 	public double getTet() 

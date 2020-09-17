@@ -19,12 +19,12 @@ public class Main {
 			{
 				asztal.kor();
 			}
-			catch (NincsJatekos nj) {}
+			catch (NincsJatekos nj) {
+				System.out.println();
+				System.out.println("------------------");
+				System.out.println();
+			}
 		}
-
-		System.out.println();
-		System.out.println("------------------");
-		System.out.println();
 		
 		
 		Asztal uresAsztal = new Asztal();
@@ -33,11 +33,6 @@ public class Main {
 			uresAsztal.kor();
 		}
 		catch (NincsJatekos nj) {}
-
-		System.out.println();
-		System.out.println("------------------");
-		System.out.println();
-		
 		
 		Asztal mesternyuszi = new Asztal();
 		mesternyuszi.addJatekos(new Mester(4));

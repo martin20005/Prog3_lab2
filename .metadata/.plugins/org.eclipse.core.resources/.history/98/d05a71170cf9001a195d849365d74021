@@ -21,10 +21,6 @@ public class Main {
 			}
 			catch (NincsJatekos nj) {}
 		}
-
-		System.out.println();
-		System.out.println("------------------");
-		System.out.println();
 		
 		
 		Asztal uresAsztal = new Asztal();
@@ -33,23 +29,5 @@ public class Main {
 			uresAsztal.kor();
 		}
 		catch (NincsJatekos nj) {}
-
-		System.out.println();
-		System.out.println("------------------");
-		System.out.println();
-		
-		
-		Asztal mesternyuszi = new Asztal();
-		mesternyuszi.addJatekos(new Mester(4));
-		mesternyuszi.addJatekos(new Nyuszi("Kék"));
-		for (int i = 0; i < 10; i++)
-		{
-			try 
-			{
-				mesternyuszi.kor();
-			}
-			catch (NincsJatekos nj) {}
-		}
-		
 	}
 }

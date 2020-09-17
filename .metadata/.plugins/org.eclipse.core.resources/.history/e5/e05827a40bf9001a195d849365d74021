@@ -1,0 +1,22 @@
+package kaszino;
+
+public class Nyuszi {
+	private String szin;
+	
+	public Nyuszi(String szin) 
+	{
+		this.szin = szin;
+	}
+	
+	@Override
+	public String toString() 
+	{
+		return szin;
+	}
+	
+	@Override 
+	public void lep() 
+	{
+		
+	}
+}

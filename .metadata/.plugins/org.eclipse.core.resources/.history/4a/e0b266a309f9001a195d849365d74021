@@ -25,7 +25,5 @@ public class Kezdo extends Jatekos {
 			asztal.emel(1.0);
 			//System.out.println("Emelek 1-gyel.");
 		}
-		
-		System.out.println();
 	}
 }

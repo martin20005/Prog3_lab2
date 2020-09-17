@@ -1,0 +1,32 @@
+package kaszino;
+
+public class Nyuszi extends Jatekos {
+	private String szin;
+	
+	public Nyuszi(String szin) 
+	{
+		this.szin = szin;
+	}
+	
+	@Override
+	public String toString() 
+	{
+		return szin;
+	}
+	
+	@Override 
+	public void lep() 
+	{
+		System.out.println(toString() + ", " + asztal.getKor() + ". kör");
+		
+		if (asztal.getTet() < 50.0)
+		{
+			asztal.emel(5);
+		}
+		else
+		{
+			System.out.println("Húha!");
+		}
+		System.out.println();
+	}
+}
