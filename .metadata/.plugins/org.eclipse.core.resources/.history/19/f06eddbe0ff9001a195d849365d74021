@@ -57,15 +57,7 @@ public class Main {
 		
 		
 		Asztal embernyuszi = new Asztal();
-		embernyuszi.addJatekos(new Ember());
-		embernyuszi.addJatekos(new Nyuszi("Kék"));
-		for (int i = 0; i < 10; i++)
-		{
-			try 
-			{
-				embernyuszi.kor();
-			}
-			catch (NincsJatekos nj) {}
-		}
+		mesternyuszi.addJatekos(new Ember());
+		mesternyuszi.addJatekos(new Nyuszi("Kék"));
 	}
 }

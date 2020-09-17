@@ -50,22 +50,6 @@ public class Main {
 			}
 			catch (NincsJatekos nj) {}
 		}
-
-		System.out.println();
-		System.out.println("------------------");
-		System.out.println();
 		
-		
-		Asztal embernyuszi = new Asztal();
-		embernyuszi.addJatekos(new Ember());
-		embernyuszi.addJatekos(new Nyuszi("Kék"));
-		for (int i = 0; i < 10; i++)
-		{
-			try 
-			{
-				embernyuszi.kor();
-			}
-			catch (NincsJatekos nj) {}
-		}
 	}
 }

@@ -36,11 +36,7 @@ public class Asztal
 	
 	public int getKor() { return kor; }
 	
-	public void emel(double d) 
-	{ 
-		tet += d; 
-		//System.out.println("Emelés: " + d);
-	}
+	public void emel(double d) { tet += d; }
 	
 	public void kor() throws NincsJatekos {
 		
@@ -69,7 +65,7 @@ public class Asztal
 				System.out.println("Aktuális tét: " + tet);
 			}
 		}
-		System.out.println("----");
+		System.out.println();
 		System.out.println();
 	}
 	
