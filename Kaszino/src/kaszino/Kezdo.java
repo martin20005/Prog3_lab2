@@ -1,0 +1,26 @@
+package kaszino;
+
+public class Kezdo extends Jatekos {
+	private String nev;
+	
+	public Kezdo(String nev)
+	{
+		this.nev = nev;
+	}
+	
+	@Override
+	public String toString() 
+	{
+		return nev;
+	}
+	
+	@Override
+	public void lep() 
+	{
+		System.out.println(toString() + ": Ez a " + asztal.getKor() + ". kör");
+		if (asztal.getKor() % 2 == 1)
+			System.out.println("Passzolok.");
+		else
+			asztal.emel(1.0);
+	}
+}

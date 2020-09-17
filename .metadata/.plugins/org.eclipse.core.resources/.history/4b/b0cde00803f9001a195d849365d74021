@@ -1,6 +1,6 @@
 package kaszino;
 
-abstract public class Jatekos {
+public class Jatekos {
 	protected Asztal asztal;
 	
 	public void lep() {

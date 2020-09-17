@@ -1,0 +1,5 @@
+package kaszino;
+
+public class Robot extends Jatekos {
+	
+}

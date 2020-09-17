@@ -1,0 +1,15 @@
+package kaszino;
+
+public class Main {
+	static public void main(String[] args) {
+		Asztal asztal = new Asztal();
+		Jatekos[] j = new Jatekos[3];
+		j[0] = new Kezdo("Egyik");
+		j[1] = new Kezdo("Masik");
+		j[2] = new Robot();
+		for (int i = 0; i < 3; i++) 
+		{
+			asztal.kor(); 
+		}
+	}
+}
