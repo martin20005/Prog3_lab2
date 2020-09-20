@@ -1,7 +1,13 @@
 package kaszino;
 
+/**
+ * @author ronaikovacs
+ * Robot típusú játékos
+ */
 public class Robot extends Jatekos {
+	/** Robot azonosítója */
 	private int id;
+	/** Következő szabad azonosító */
 	static private int next_id = 0;
 	
 	public Robot()
@@ -15,6 +21,9 @@ public class Robot extends Jatekos {
 		return "Robot" + id;
 	}
 	
+	/**
+	 * A robot nem emel tétet.
+	 */
 	@Override
 	public void lep() 
 	{

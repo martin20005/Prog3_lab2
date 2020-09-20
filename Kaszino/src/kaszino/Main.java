@@ -1,8 +1,12 @@
 package kaszino;
 
+/**
+ * @author ronaikovacs
+ * Játékmenetet kezelő osztály.
+ */
 public class Main {
 	static public void main(String[] args) {
-		Asztal asztal = new Asztal();
+		Asztal asztal = new StrongAsztal();
 		Jatekos[] jatekosok = new Jatekos[3];
 		jatekosok[0] = new Kezdo("Egyik");
 		jatekosok[1] = new Kezdo("Masik");
@@ -27,7 +31,7 @@ public class Main {
 		System.out.println();
 		
 		
-		Asztal uresAsztal = new Asztal();
+		Asztal uresAsztal = new StrongAsztal();
 		try 
 		{
 			uresAsztal.kor();
@@ -39,7 +43,7 @@ public class Main {
 		System.out.println();
 		
 		
-		Asztal mesternyuszi = new Asztal();
+		Asztal mesternyuszi = new StrongAsztal();
 		mesternyuszi.addJatekos(new Mester(4));
 		mesternyuszi.addJatekos(new Nyuszi("Kék"));
 		for (int i = 0; i < 10; i++)
@@ -56,7 +60,7 @@ public class Main {
 		System.out.println();
 		
 		
-		Asztal embernyuszi = new Asztal();
+		Asztal embernyuszi = new StrongAsztal();
 		embernyuszi.addJatekos(new Ember());
 		embernyuszi.addJatekos(new Nyuszi("Kék"));
 		for (int i = 0; i < 10; i++)
@@ -67,5 +71,11 @@ public class Main {
 			}
 			catch (NincsJatekos nj) {}
 		}
+
+		System.out.println();
+		System.out.println("------------------");
+		System.out.println();
+		
+		
 	}
 }

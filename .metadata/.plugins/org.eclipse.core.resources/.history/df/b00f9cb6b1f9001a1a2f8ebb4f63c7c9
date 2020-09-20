@@ -1,0 +1,30 @@
+package kaszino;
+
+/**
+ * @author ronaikovacs
+ * Robot típusú játékos
+ */
+public class Robot extends Jatekos {
+	/** Robot azonosítója */
+	private int id;
+	/** Következő szabad azonosító */
+	static private int next_id = 0;
+	
+	public Robot()
+	{
+		id = next_id++;
+	}
+	
+	@Override
+	public String toString() 
+	{
+		return "Robot" + id;
+	}
+	
+	@Override
+	public void lep() 
+	{
+		System.out.println(toString() + ": Ez a " + asztal.getKor() + ". kör");
+		System.out.println();
+	}
+}

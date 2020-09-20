@@ -1,8 +1,15 @@
 package kaszino;
 
+/**
+ * @author ronaikovacs
+ * Kezdőként viselkedő játékos.
+ */
 public class Kezdo extends Jatekos {
 	private String nev;
 	
+	/**
+	 * @param nev  Játékos neve
+	 */
 	public Kezdo(String nev)
 	{
 		this.nev = nev;
@@ -14,6 +21,9 @@ public class Kezdo extends Jatekos {
 		return nev;
 	}
 	
+	/**
+	 * A Kezdő passzol vagy 1-gyel emel.
+	 */
 	@Override
 	public void lep() 
 	{

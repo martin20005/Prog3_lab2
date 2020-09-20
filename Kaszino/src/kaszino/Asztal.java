@@ -1,80 +1,56 @@
 package kaszino;
 import java.util.Random;
 
-public class Asztal 
+abstract public class Asztal 
 {
-	private Jatekos[] jatekosok;
-	private double tet;
-	private int kor;
-	private double goal;
+	/** Asztalnál ülő játékosok */
+	protected Jatekos[] jatekosok;
 	
-	private int j_db;
+	/** Aktuális tét */
+	protected double tet;
 	
-	public Asztal()
-	{
-		jatekosok = new Jatekos[10];
-		ujJatek();
-	}
+	/** Aktuális kör sorszáma */
+	protected int kor;
 	
-	public void ujJatek() 
-	{
-		tet = kor = 0;
-		Random r = new Random();
-		goal = r.nextDouble() * 100.0;
-	}
+	/** Célérték */
+	protected double goal;
 	
-	public void addJatekos(Jatekos j) 
-	{
-		if (j_db >= 10)
-			System.out.println("Nem fér ide több játékos");
-		else 
-		{
-			j.setAsztal(this);
-			jatekosok[j_db++] = j;
-		}
-	}
 	
-	public int getKor() { return kor; }
+	/** Az asztalnál ülő Játékosok száma */
+	protected int j_db;
 	
-	public void emel(double d) 
-	{ 
-		tet += d; 
-		//System.out.println("Emelés: " + d);
-	}
 	
-	public void kor() throws NincsJatekos {
-		
-		if (j_db == 0) 
-			throw new NincsJatekos("Nem ülnek az asztalnál.");
-		else
-		{
-			if (tet > goal) { 
-				System.out.println("Vége a játéknak.");
-			}
-			else 
-			{
-				kor++;
-				for (int i = 0; i < j_db; i++) 
-				{
-					jatekosok[i].lep();
-					if (tet > goal) 
-					{
-						if (tet < 1.1*goal) 
-						{
-							System.out.println("A nyertes: " + i);
-							break;
-						}
-					}
-				}
-				System.out.println("Aktuális tét: " + tet);
-			}
-		}
-		System.out.println("----");
-		System.out.println();
-	}
+	public Asztal() {}
 	
-	public double getTet() 
-	{
-		return tet; 
-	}
+	/**
+	 * Új játék indítása
+	 * <p>
+	 * Kezdőértékek beállítása
+	 */
+	public abstract void ujJatek();
+	
+	/**
+	 * Játékos asztaljoz ültetése
+	 * @param j  Az új játékos
+	 */
+	public abstract void addJatekos(Jatekos j);
+	
+	/**
+	 * @return  Aktuális kör száma
+	 */
+	public abstract int getKor();
+	
+	/**
+	 * Tét emelése egy értékkel
+	 * @param d  Az emelés értéke
+	 */
+	public abstract void emel(double d);
+	
+	/**
+	 * Asztalnál ülő játékosok lépése
+	 * @throws NincsJatekos  Üres asztal esetén nem lehet kör
+	 */
+	public abstract void kor() throws NincsJatekos;
+	
+	public abstract double getTet();
 }

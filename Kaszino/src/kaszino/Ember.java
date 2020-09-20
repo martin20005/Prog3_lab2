@@ -1,12 +1,18 @@
 package kaszino;
 import java.util.Scanner;
 
+/**
+ * @author ronaikovacs
+ * Felhasználó által kezelhető játékos.
+ */
 public class Ember extends Jatekos {
-	public Ember()
-	{
-		
-	}
+	public Ember() {}
 	
+	/**
+	 * Felhasználó lépése
+	 * <p>
+	 * A felhasználó kedve szerint emelhet.
+	 */
 	@Override
 	public void lep() 
 	{

@@ -1,0 +1,11 @@
+package kaszino;
+
+public class WeakAsztal extends Asztal 
+{
+	Weakreference<Jatekos> jatekosok[];
+	
+	public WeakAsztal() 
+	{
+		jatekosok = (WeakReference<Jatekos>[])new WeakReference[10]; 
+	}
+}

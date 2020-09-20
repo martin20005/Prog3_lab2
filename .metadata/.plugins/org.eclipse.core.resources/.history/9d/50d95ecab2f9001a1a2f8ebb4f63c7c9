@@ -1,0 +1,25 @@
+package kaszino;
+
+public class Mester extends Jatekos {
+	
+	private int fokozat;
+	
+	public Mester(int fokozat)
+	{
+		this.fokozat = fokozat;
+	}
+	
+	@Override
+	public String toString() 
+	{
+		return "Mester, " + fokozat + ". fokozat";
+	}
+	
+	@Override
+	public void lep()
+	{
+		System.out.println(toString() + ": " + asztal.getKor() + ". kör");
+		asztal.emel(asztal.getTet() * ((double)(100 + fokozat) / 100.0));
+		System.out.println();
+	}
+}
