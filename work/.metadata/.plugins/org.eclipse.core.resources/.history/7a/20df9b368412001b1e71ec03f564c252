@@ -1,0 +1,21 @@
+
+public class Caesar {
+	
+	private String caesarCode(String input, char offset)
+	{
+		input = input.toUpperCase();
+		
+		String output = "";
+		for (char c : input.toCharArray())
+		{
+			output += (c - 'A' + offset) % ('Z' - 'A') + 'A';
+		}
+		return output;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
