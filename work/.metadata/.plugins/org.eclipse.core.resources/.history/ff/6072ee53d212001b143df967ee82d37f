@@ -36,7 +36,7 @@ public class CaesarFrame extends JFrame
 		{
 			outputText.setText(
 					(new Caesar()).getCaesarCode(
-					inputText.getText(), 
+					inputText.getText() + e.getKeyChar(), 
 					(char) offsetCombo.getSelectedItem()
 					));
 		}

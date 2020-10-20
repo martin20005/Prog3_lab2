@@ -34,9 +34,12 @@ public class CaesarFrame extends JFrame
 		@Override
 		public void keyPressed(KeyEvent e) 
 		{
+			char newestChar = e.getKeyChar();
+			if (!Character.isLetter(newestChar)) 
+				newestChar = null;
 			outputText.setText(
 					(new Caesar()).getCaesarCode(
-					inputText.getText(), 
+					inputText.getText() + newestChar, 
 					(char) offsetCombo.getSelectedItem()
 					));
 		}

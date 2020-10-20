@@ -20,6 +20,7 @@ public class CaesarFrame extends JFrame
 		{
 			if (ae.getActionCommand().contentEquals("encode"))
 			{
+				Caesar c = new Caesar();
 				outputText.setText(
 						(new Caesar()).getCaesarCode(
 						inputText.getText(), 
@@ -34,11 +35,15 @@ public class CaesarFrame extends JFrame
 		@Override
 		public void keyPressed(KeyEvent e) 
 		{
-			outputText.setText(
-					(new Caesar()).getCaesarCode(
-					inputText.getText(), 
-					(char) offsetCombo.getSelectedItem()
-					));
+			if (e.equals("textChange")) 
+			{
+				Caesar c = new Caesar();
+				outputText.setText(
+						(new Caesar()).getCaesarCode(
+						inputText.getText(), 
+						(char) offsetCombo.getSelectedItem()
+						));
+			}
 		}
 	}
 	
@@ -72,6 +77,6 @@ public class CaesarFrame extends JFrame
 		codeButton.setActionCommand("encode");
 		codeButton.addActionListener(new OkButtonActionListener());
 		inputText.setActionCommand("textChange");
-		inputText.addKeyListener(new InputFieldKeyListener());
+		inputText.addComponentListener();
 	}
 }
