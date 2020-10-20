@@ -1,0 +1,11 @@
+import javax.swing.*;
+
+public class CaesarFrame extends JFrame 
+{
+
+	public CaesarFrame() 
+	{
+		super("Caesar");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+}

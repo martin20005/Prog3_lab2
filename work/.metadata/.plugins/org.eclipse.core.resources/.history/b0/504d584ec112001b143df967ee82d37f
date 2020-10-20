@@ -1,0 +1,13 @@
+import javax.swing.*;
+
+public class CaesarFrame extends JFrame 
+{
+
+	public CaesarFrame() 
+	{
+		super("SwingLab");
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setSize(400, 110);
+		this.setResizable(false);
+	}
+}
