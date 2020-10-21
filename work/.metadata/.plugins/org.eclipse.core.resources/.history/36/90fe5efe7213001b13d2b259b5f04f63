@@ -1,0 +1,128 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
+import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+
+public class CaesarFrame extends JFrame implements FocusListener
+{
+	Object[] abc = new Object[] {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+	
+	// 3
+	private JTextField inputText = new JTextField(20);
+	private JTextField outputText = new JTextField(20);
+	private JButton codeButton = new JButton("Code!");
+	private JComboBox<?> offsetCombo = new JComboBox<>(abc);
+	
+	class OkButtonActionListener implements ActionListener
+	{		
+		public void actionPerformed(ActionEvent ae)
+		{
+			if (ae.getActionCommand().contentEquals("code"))
+			{
+				outputText.setText(
+						(new Caesar()).getCaesarCode(
+						inputText.getText(), 
+						(char) offsetCombo.getSelectedItem()
+						));
+			}
+		}
+	}
+	
+	// Automatizált encode-olás
+	class InputFieldKeyListener extends KeyAdapter implements DocumentListener
+	{
+		void caesar() 
+		{
+			outputText.setText(
+					(new Caesar()).getCaesarCode(
+					inputText.getText(), 
+					(char) offsetCombo.getSelectedItem()
+					));
+		}
+		
+		// 5
+		/*
+		@Override
+		public void keyPressed(KeyEvent e) { caesar(); }
+		*/
+
+		// 6
+		@Override
+		public void changedUpdate(DocumentEvent arg0) { caesar(); }
+
+		@Override
+		public void insertUpdate(DocumentEvent arg0) { caesar(); }
+
+		@Override
+		public void removeUpdate(DocumentEvent arg0) { caesar(); }
+	}
+	
+	public CaesarFrame() 
+	{
+		super("SwingLab");
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		//this.setName("SwingLab");
+		this.setSize(400, 110);
+		this.setResizable(true);
+		
+		// 3
+		// layout
+		BoxLayout layout = new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS);
+		getContentPane().setLayout(layout);
+
+		// panelek és feltöltésük
+		JPanel upper = new JPanel();
+		JPanel lower = new JPanel();
+		
+		upper.add(offsetCombo);
+		upper.add(inputText);
+		upper.add(codeButton);
+		lower.add(new JLabel("Output:"));
+		lower.add(outputText);
+
+		// panelek jozzáadása a frame-hez
+		this.add(upper);
+		this.add(lower);
+		
+		//outputText.setEditable(false); // 7-es miatt kikommentelve
+		
+		// 4
+		codeButton.setActionCommand("code");
+		codeButton.addActionListener(new OkButtonActionListener());
+		
+		// 5
+		/*
+		inputText.setActionCommand("textChange");
+		inputText.addKeyListener(new InputFieldKeyListener());
+		// megfigyelés: a feldolgozott szöveg 1 char-nyi "lemaradásban" van
+		*/
+		
+		// 6
+		inputText.getDocument().addDocumentListener(new InputFieldKeyListener());
+		
+		// 7
+		inputText.addFocusListener(this);
+		outputText.addFocusListener(this);
+	}
+
+	@Override
+	public void focusGained(FocusEvent arg0) {
+		if (arg0.getComponent().equals(inputText))
+		{
+			
+		}
+		
+	}
+
+	@Override
+	public void focusLost(FocusEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+}
